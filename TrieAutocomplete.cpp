@@ -107,7 +107,10 @@ disp addtodisp(string s,int r)
 }
 bool sorting(disp d1,disp d2)
 {
-    return(d1.rep>d2.rep);
+    if(d1.rep!=d2.rep)
+        return(d1.rep>d2.rep);
+    else
+        return (d1.s<d2.s);
 }
 void autocomplete(struct trie *t,string s,vector<disp> &v1)
 {
